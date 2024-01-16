@@ -1,18 +1,22 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <div class="container">
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <h1>Er det tennisvejr i dag?</h1>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+<style lang="sass" scoped>
+@import @/assets/main.sass
 
-export default defineComponent({
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
-});
-</script>
+.home
+  .container
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    border-bottom: 1px solid #d9d9d9
+    padding-bottom: 16px
+</style>
